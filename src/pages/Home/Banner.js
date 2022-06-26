@@ -4,7 +4,7 @@ import bg from '../../assets/images/bg.png';
 
 const Banner = () => {
     return (
-        <div>
+        <div className='px-12'>
             <div className="hero min-h-screen" style={{background:`url(${bg})`}}>
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src={chair} alt='' className="max-w-sm rounded-lg shadow-2xl" />
