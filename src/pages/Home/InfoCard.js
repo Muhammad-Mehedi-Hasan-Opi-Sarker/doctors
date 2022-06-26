@@ -1,36 +1,14 @@
 import React from 'react';
 
-const InfoCard = ({img}) => {
+const InfoCard = ({img, cardTitle, bgColor}) => {
     return (
         <div>
-            <div class="card lg:card-side bg-accent shadow-xl">
+            <div className={`card lg:card-side shadow-xl text-white ${bgColor}`}>
                 <figure><img src={img} alt="Album"/></figure>
-                <div class="card-body">
-                    <h2 class="card-title">New album is released!</h2>
+                <div className="card-body">
+                    <h2 className="card-title">{cardTitle}</h2>
                     <p>Click the button to listen on Spotiwhy app.</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Listen</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card lg:card-side bg-accent shadow-xl">
-                <figure><img src={img} alt="Album"/></figure>
-                <div class="card-body">
-                    <h2 class="card-title">New album is released!</h2>
-                    <p>Click the button to listen on Spotiwhy app.</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Listen</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card lg:card-side bg-accent shadow-xl">
-                <figure><img src={img} alt="Album"/></figure>
-                <div class="card-body">
-                    <h2 class="card-title">New album is released!</h2>
-                    <p>Click the button to listen on Spotiwhy app.</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Listen</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>

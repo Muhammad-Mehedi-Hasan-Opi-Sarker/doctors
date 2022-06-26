@@ -4,11 +4,11 @@ import chair from '../../assets/images/chair.png';
 const Banner = () => {
     return (
         <div>
-            <div class="hero min-h-screen bg-base-200">
+            <div class="hero min-h-screen">
                 <div class="hero-content flex-col lg:flex-row-reverse">
                     <img src={chair} alt='' class="max-w-sm rounded-lg shadow-2xl" />
-                    <div>
-                        <h1 class="text-5xl font-bold">Your New Smile Starts Here</h1>
+                    <div>                        
+                        <h1 class="text-5xl font-bold" style={{color:'#000000'}}>Your New Smile Starts Here</h1>                        
                         <p class="py-6">Lorem Ipsum is simply dummy text of the printing and 
                         typesetting industry.
                          Lorem Ipsum has been the industry's standard dummy text ever since the</p>
