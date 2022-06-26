@@ -3,12 +3,12 @@ import tretment from '../../assets/images/treatment.png';
 
 const Child = () => {
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl lg:px-12 gap-5">
-            <figure><img 
+        <div className="lg:card-side bg-base-100 lg:px-24 lg:flex">
+            <figure className='flex-1'><img 
             className='h-96 w-96'
              src={tretment} alt="Album"/></figure>
-            <div className="card-body">
-                <h1 className="card-title text-5xl font-bold" style={{ color: '#000000' }}>Exceptional Dental 
+            <div className="card-body flex-1">
+                <h1 className="card-title lg:text-5xl lg:font-bold" style={{ color: '#000000' }}>Exceptional Dental 
                 Care, on Your Terms</h1>
                 <p>It is a long established fact that a reader will be distracted by the readable content 
                     of a page when looking at its layout. 
