@@ -8,7 +8,7 @@ import Login from './pages/Login/Login';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App px-12">
       <Navbar></Navbar>
       <Routes>
         <Route path='/home' element={<Home></Home>}></Route>
