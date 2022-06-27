@@ -3,7 +3,7 @@ import Appointment from './Appointment';
 import Banner from './Banner';
 import Child from './Child';
 import Contract from './Contract';
-import Footer from './Footer';
+import Footer from '../Shared/Footer';
 import Info from './Info';
 import Services from './Services';
 import Testimonial from './Testimonial';
