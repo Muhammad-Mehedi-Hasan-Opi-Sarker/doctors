@@ -3,7 +3,7 @@ import tretment from '../../assets/images/treatment.png';
 
 const Child = () => {
     return (
-        <div className="lg:card-side bg-base-100 lg:px-36 px-12 lg:flex">
+        <div className="lg:card-side bg-base-100 lg:px-36 px-8 lg:flex">
             <figure className='flex-1'><img 
             className='h-96 w-96'
              src={tretment} alt="Album"/></figure>

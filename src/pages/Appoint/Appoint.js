@@ -5,11 +5,9 @@ import AvailableAppointment from './AvailableAppointment';
 
 const Appoint = () => {
     return (
-        <div>
+        <div className='lg:px-12 px-8'>
             <AppointmentBanner></AppointmentBanner>
-            <AvailableAppointment>
-                
-            </AvailableAppointment>
+            <AvailableAppointment></AvailableAppointment>
             <Footer></Footer>
         </div>
     );

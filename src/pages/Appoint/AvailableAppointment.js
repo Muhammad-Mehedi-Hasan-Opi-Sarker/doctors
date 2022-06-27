@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Services from './Services';
 
 const AvailableAppointment = () => {
     const [services,setServices] = useState([]);
@@ -9,6 +10,14 @@ const AvailableAppointment = () => {
         <div>
             <h1 className='text-primary font-bold text-2xl'>
                 Available Services on April 30, 2022</h1>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5'>
+                {
+                    services.map(service=><Services
+                    key={service._id}
+                    service={service}
+                    ></Services>)
+                }
+                </div>
         </div>
     );
 };
