@@ -2,7 +2,7 @@ import React from 'react';
 
 const Reviews = ({ patient }) => {
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-fit bg-base-100 shadow-xl">
             <div className="card-body">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias ac
                     cusamus sit itaque ut a facere reprehenderit natus veniam ,
