@@ -10,7 +10,7 @@ const AvailableAppointment = () => {
         <div>
             <h1 className='text-primary font-bold text-2xl'>
                 Available Services on April 30, 2022</h1>
-                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5'>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-20'>
                 {
                     services.map(service=><Services
                     key={service._id}

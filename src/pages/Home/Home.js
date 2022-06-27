@@ -18,7 +18,6 @@ const Home = () => {
             <Appointment></Appointment>
             <Testimonial></Testimonial>
             <Contract></Contract>
-            <Footer></Footer>
         </div>
     );
 };
