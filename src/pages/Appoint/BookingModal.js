@@ -1,17 +1,19 @@
 import React from 'react';
 
-const BookingModal = ({ treatment }) => {
+const BookingModal = ({ treatment,setTreatment }) => {
     const { slots, name } = treatment;
     const submit = event => {
         event.preventDefault();
         const date = event.target.date.value;
         const slot = event.target.slot.value;
-        const name = event.target.slot.value;
+        const name = event.target.name.value;
         const number = event.target.number.value;
         const email = event.target.email.value;
         console.log(date, slot, name, number, email);
+        setTreatment(null)
     }
     return (
+        // code for modal
         <div>
             <input type="checkbox" id="bookingModal" class="modal-toggle" />
             <div class="modal">
@@ -22,7 +24,7 @@ const BookingModal = ({ treatment }) => {
                         <input type="date" name='date' class="input input-bordered w-full max-w-xs" />
                         <select name='slot' class="select select-bordered w-full max-w-xs">
                             {
-                                slots.map(slot => <option>{slot}</option>)
+                                slots.map(slot => <option key={slot}>{slot}</option>)
                             }
                         </select>
                         <input type="text" name='name' placeholder="Full Name" class="mt-4 input input-bordered w-full max-w-xs" />
