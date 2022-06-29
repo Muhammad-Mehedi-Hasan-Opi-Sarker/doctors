@@ -1,12 +1,17 @@
 import React from 'react';
-
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 const Login = () => {
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    if(user){
+        console.log(user)
+    }
     return (
         <div>
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <div className="card-body w-fit">
+                        <div className="card-body">
                             <form className='form-control'>
                                 <h1 className="text-5xl font-bold">Login now!</h1>
                                 <label className="label">
@@ -24,9 +29,9 @@ const Login = () => {
                                     <button className="btn btn-primary">Login</button>
                                 </div>
                             </form>
-                            <div class="divider">OR</div>
+                            <div className="divider">OR</div>
                             <div>
-                                <button class="btn btn-outline btn-secondary">Button</button>
+                                <button onClick={()=>{signInWithGoogle()}} className="btn btn-outline btn-secondary">Google Sign In</button>
                             </div>
                         </div>
                     </div>
