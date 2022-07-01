@@ -46,7 +46,7 @@ const Login = () => {
 
     return (
         <div className='lg:ml-96 mt-12 mb-14'>
-            <div className="card w-fit lg:ml-32 ml-9 bg-base-100 shadow-xl">
+            <div className="card w-fit lg:ml-32 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h1 className="text-5xl font-bold">Login now!</h1>
                     <form onSubmit={handleSubmit(onSubmit)}>

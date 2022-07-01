@@ -9,6 +9,8 @@ import Appoint from './pages/Appoint/Appoint';
 import Footer from './pages/Shared/Footer';
 import Register from './pages/Login/Register';
 import RequireAuth from './pages/Login/RequireAuth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -25,9 +27,11 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
+      <ToastContainer></ToastContainer>
       </div>
       <Footer></Footer>
     </div>
+    
   );
 }
 
