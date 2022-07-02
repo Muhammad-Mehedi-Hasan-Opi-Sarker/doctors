@@ -21,7 +21,8 @@ const BookingModal = ({ treatment, setTreatment }) => {
             slot,
             name,
             number,
-            email
+            email,
+            date
 
         }
         fetch('http://localhost:5000/booking', {
@@ -33,11 +34,10 @@ const BookingModal = ({ treatment, setTreatment }) => {
         })
             .then(response => response.json())
             .then(data => {
-                toast('Successfully submit')
+               
+                    toast('Successfully submit')
+              
             })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
 
         // to close modal 
         setTreatment(null)
