@@ -21,7 +21,7 @@ const BookingModal = ({ treatment, setTreatment }) => {
             slot,
             name,
             number,
-            email,
+            patientEmail:email,
             date
 
         }
