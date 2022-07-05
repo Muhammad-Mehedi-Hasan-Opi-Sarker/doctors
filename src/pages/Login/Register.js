@@ -4,44 +4,45 @@ import { useForm } from 'react-hook-form';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Lodding';
 import { Link, useNavigate } from 'react-router-dom';
+import useToken from '../../hooks/useToken';
 
 const Register = () => {
-     // google auth 
-     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
-     // email and password 
-     const [
+    // google auth
+    const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
+    // email and password 
+    const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
-      const navigate = useNavigate();
+    ] = useCreateUserWithEmailAndPassword(auth);
+    const [token] = useToken(user || guser);
+    const navigate = useNavigate();
     //   update profile for 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-     //  react hook form 
-     const { register, formState: { errors }, handleSubmit } = useForm();
-     const onSubmit = async(data) => {
+    //  react hook form 
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    const onSubmit = async (data) => {
         await createUserWithEmailAndPassword(data.email, data.password);
-        await updateProfile({ displayName:data.name});
-        navigate('/appointment');
-        console.log(data);
-     };
-    
- 
-     let errorElement;
- 
-     if (user || guser) {
-         console.log(user)
-     }
- 
-     if (error || gerror) {
-         errorElement = <p className='text-red-500'><small>{error?.message || error?.message}</small></p>
-     }
- 
-     if (loading || gloading) {
-         return <Loading></Loading>
-     }
-     
+        await updateProfile({ displayName: data.name });
+        
+    };
+
+    let errorElement;
+
+    if (user || guser) {
+        // console.log(user)
+        //  navigate('/appointment');
+    }
+
+    if (error || gerror) {
+        errorElement = <p className='text-red-500'><small>{error?.message || error?.message}</small></p>
+    }
+
+    if (loading || gloading) {
+        return <Loading></Loading>
+    }
+
     return (
         <div className='lg:ml-96 mt-12 mb-14'>
             <div className="card w-fit lg:ml-32 bg-base-100 shadow-xl">
